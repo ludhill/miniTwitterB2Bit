@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  :root { 
+    --background: #0b0e14;
+    --card-bg: #151921;
+    --primary-blue: #1d9bf0;  
+  }
+
+  body {
+    @apply bg-[#0b0e14] text-white antialiased m-0 p-0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  } 
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+}
