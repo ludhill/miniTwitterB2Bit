@@ -16,9 +16,10 @@ type DadosForm = z.infer<typeof esquemaSchema>;
 
 interface PropriedadesAutenticacao {
   aoLogar: () => void;
+  aoVoltar: () => void;
 }
  
-export function PaginaAutenticacao({ aoLogar }: PropriedadesAutenticacao) {
+export function PaginaAutenticacao({ aoLogar, aoVoltar }: PropriedadesAutenticacao) {
   const [abaAtiva, setAbaAtiva] = useState<'login' | 'cadastro'>('login');
   
   const { 
@@ -61,11 +62,16 @@ export function PaginaAutenticacao({ aoLogar }: PropriedadesAutenticacao) {
     <div className="min-h-screen bg-[#0b0e14] flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md bg-[#151921] rounded-3xl p-8 border border-gray-800 shadow-2xl">
         
-        <div className="flex justify-center mb-8">
-          <div className="flex items-center gap-2 text-[#1d9bf0]">
-            <Bird size={40} strokeWidth={2.5} />
+       <div className="flex justify-center mb-8">
+          <button 
+            type="button"
+            onClick={aoVoltar}
+            className="flex items-center gap-2 text-[#1d9bf0] hover:opacity-80 transition-all cursor-pointer group"
+            title="Voltar para a Timeline"
+          >
+            <Bird size={40} strokeWidth={2.5} className="group-hover:scale-110 transition-transform" />
             <span className="text-2xl font-black tracking-tighter">Mini Twitter</span>
-          </div>
+          </button>
         </div>
         
         <div className="flex bg-[#0b0e14] p-1 rounded-xl mb-8 border border-gray-800">

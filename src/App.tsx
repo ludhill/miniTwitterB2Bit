@@ -21,6 +21,7 @@ export default function App() {
     localStorage.removeItem('usuarioId');
     setEstaLogado(false);
     setExibirLogin(false);
+    // Recarregar a página garante que o cache do TanStack Query seja limpo
     window.location.reload();
   };
 
@@ -32,10 +33,13 @@ export default function App() {
   if (exibirLogin && !estaLogado) {
     return (
       <PaginaAutenticacao 
+        // Sucesso no login: atualiza estados e esconde o formulário
         aoLogar={() => {
           setEstaLogado(true);
           setExibirLogin(false);
         }} 
+        // Função para o usuário desistir do login e voltar para o Feed
+        aoVoltar={() => setExibirLogin(false)} 
       />
     );
   }
