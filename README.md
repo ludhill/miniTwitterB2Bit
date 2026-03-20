@@ -6,46 +6,16 @@ Este projeto consiste em uma aplicação de rede social simplificada, desenvolvi
 ----------
 
 ## Arquitetura e Decisões Técnicas
-
-A escolha das tecnologias não foi arbitrária. Cada biblioteca cumpre um papel estratégico na arquitetura:
-
-**Tecnologia**
-
-**Função**
-
-**Justificativa Técnica**
-
-**Vite 8 + TS**
-
-Build & Tipagem
-
-Utilização da versão mais recente do ecossistema para máxima performance em tempo de desenvolvimento e segurança de tipos em escala.
-
-**TanStack Query**
-
-Server State
-
-Substitui o uso excessivo de `useEffect` e estados globais para dados de API, permitindo cache inteligente, sincronização automática e estados de _loading_ nativos.
-
-**Zod + Hook Form**
-
-Formulários
-
-Implementação de validação declarativa e "uncontrolled components", reduzindo re-renderizações desnecessárias e garantindo integridade de dados antes do disparo de requisições.
-
-**Tailwind CSS**
-
-Estilização
-
-Abordagem "utility-first" que garante um CSS enxuto e rapidez na prototipagem de interfaces complexas e responsivas.
-
-**Axios**
-
-HTTP Client
-
-Centralização da comunicação via instâncias e interceptors, facilitando a injeção automática de tokens JWT.
-
+| **Tecnologia** | **Função** | **Justificativa Técnica** |
+|--|--|--|
+| **Vite 8 + TS** | Build & Tipagem | Utilização da versão mais recente do ecossistema para máxima performance em tempo de desenvolvimento e segurança de tipos em escala. |
+| **TanStack Query** | Server State | Substitui o uso excessivo de `useEffect` e estados globais para dados de API, permitindo cache inteligente, sincronização automática e estados de _loading_ nativos. |
+| **Zod + Hook Form** | Formulários | Implementação de validação declarativa e "uncontrolled components", reduzindo re-renderizações desnecessárias e garantindo integridade de dados antes do disparo de requisições. |
+| **Tailwind CSS** | Estilização | Abordagem "utility-first" que garante um CSS enxuto e rapidez na prototipagem de interfaces complexas e responsivas. |
+| **Axios** | HTTP Client | Centralização da comunicação via instâncias e interceptors, facilitando a injeção automática de tokens JWT. |
+| | | |
 ----------
+
 
 ##  Funcionalidades de Destaque
 
